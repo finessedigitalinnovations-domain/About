@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+ <html lang="en">
+ <head>
+ <meta charset="UTF-8" />
+ <meta name="viewport"
+ content="width=device-width, initial-scale=1" />
+ <title>About</title>
+ <style>
+  .floating-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* so background images don’t block clicks */
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: -1; /* behind all content */}
+  .floating {
+  position: absolute;
+  width: 50px; /* size of each floating image */
+  animation: float 6s ease-in-out infinite;}
+ @keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.8;}
+  50% {
+    transform: translateY(-20px);
+    opacity: 1;}
+ }
+   .hamburger {/*hamburger icon creation*/
+  width: 35px;
+  height: 30px;
+  position: absolute;
+  cursor: pointer;
+  margin: 10px;
+  z-index: 1001;  
+ }
+ .hamburger span {
+  background: #00FF88;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+ }
+ .hamburger span:nth-child(1) {
+  top: 0;}
+  .hamburger span:nth-child(2) {
+  top: 13px;}
+  .hamburger span:nth-child(3) {
+  top: 26px;}
+ /* Transform hamburger to X when active
+ */.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 13px;}
+  .hamburger.active span:nth-child(2) {
+  opacity: 0;}
+  .hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 13px;}
+  .menu {
+  position: fixed;
+  top: 0;
+  right: -100%; /* hide off screen */
+  width: 250px;
+  height: 100%;
+  background: #000436;
+  box-shadow: -4px 0 12px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 60px 20px;
+  transition: right 0.6s ease;
+  z-index: 1000;}
+  .menu a {
+  color: whitesmoke;
+  text-decoration: none;
+  margin: 15px 0;
+  font-size: 18px;
+  transition: color 0.3s;}
+  .menu a:hover {
+  color: #00FF88;
+   background: #000436;
+   }
+ /* Show menu when active */.menu.active {
+  right: 0}
+  body {
+    font-family: Arial, sans-serif;
+    background: #001F3F;
+    margin: 0; padding: 0;
+    color: #001F3F;
+  }
+  header {
+    background: #000436;
+    color: white;
+    padding: 1px;
+    text-align: center;
+  }
+  main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  h2 {
+    color: #000436;
+    text-align: center;
+  }
+  h2:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  a {color: #000436;
+    text-align: center;
+    text-decoration: none;
+  }
+  a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .feature {
+    background: #00FF88;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow:0 0 15px blue;
+  }
+  .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px blue;
+        }
+  h1{font-family: 'Times New Roman', Times, serif;
+     font-size: 300%;
+     color: #00FF88;
+     position: static;
+     z-index: 1001;
+     margin-top: 50px;
+    }
+  .feature img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  p{text-align: center;
+    color: #00FF88;
+    font-size: larger;
+    background-color: #001F3F;
+  }
+  footer {
+    text-align: center;
+    padding: 15px;
+    background: #000436;
+    color: #00FF88;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 100px;
+  }
+  button {
+    background: #000436;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #000436;
+   cursor: pointer;
+  }
+ </style>
+ </head>
+ <body>
+   <div class="floating-container">
+  <img src="https://drive.google.com/thumbnail?id=1mIwtZcJO39LYWtO-A5scjfwKz02Z1EGa" class="floating" style="top: 10%; left: 90%;"/>
+  <img src="https://drive.google.com/thumbnail?id=1mIwtZcJO39LYWtO-A5scjfwKz02Z1EGa" class="floating" style="bottom: 10%; right: 90%;"/>
+  <img src="https://drive.google.com/thumbnail?id=1mIwtZcJO39LYWtO-A5scjfwKz02Z1EGa" class="floating" style="top: 20%; left: 80%;"/>
+  <img src="https://drive.google.com/thumbnail?id=1mIwtZcJO39LYWtO-A5scjfwKz02Z1EGa" class="floating" style="bottom: 20%; right: 80%;"/>
+  <img src="https://drive.google.com/thumbnail?id=1mIwtZcJO39LYWtO-A5scjfwKz02Z1EGa" class="floating" style="top: 30%; left: 70%;"/>
+  <img src="https://drive.google.com/thumbnail?id=1mIwtZcJO39LYWtO-A5scjfwKz02Z1EGa" class="floating" style="bottom: 30%; right: 70%;"/>
+  <img src="https://drive.google.com/thumbnail?id=1mIwtZcJO39LYWtO-A5scjfwKz02Z1EGa" class="floating" style="top: 40%; left: 60%;"/>
+  <img src="https://drive.google.com/thumbnail?id=1mIwtZcJO39LYWtO-A5scjfwKz02Z1EGa" class="floating" style="bottom: 40%; right: 60%;"/>
+  <img src="https://drive.google.com/thumbnail?id=1mIwtZcJO39LYWtO-A5scjfwKz02Z1EGa" class="floating" style="top: 50%; left: 50%;"/>
+  <img src="https://drive.google.com/thumbnail?id=1mIwtZcJO39LYWtO-A5scjfwKz02Z1EGa" class="floating" style="bottom: 50%; right: 50%;"/>
+  <img src="https://drive.google.com/thumbnail?id=1mIwtZcJO39LYWtO-A5scjfwKz02Z1EGa" class="floating" style="top: 60%; left: 40%;"/>
+  <img src="https://drive.google.com/thumbnail?id=1mIwtZcJO39LYWtO-A5scjfwKz02Z1EGa" class="floating" style="bottom: 60%; right: 40%;"/>
+  <img src="https://drive.google.com/thumbnail?id=1mIwtZcJO39LYWtO-A5scjfwKz02Z1EGa" class="floating" style="top: 70%; left: 30%;"/>
+  <img src="https://drive.google.com/thumbnail?id=1mIwtZcJO39LYWtO-A5scjfwKz02Z1EGa" class="floating" style="bottom: 70%; right: 30%;"/>
+  <img src="https://drive.google.com/thumbnail?id=1mIwtZcJO39LYWtO-A5scjfwKz02Z1EGa" class="floating" style="top: 80%; left: 20%;"/>
+  <img src="https://drive.google.com/thumbnail?id=1mIwtZcJO39LYWtO-A5scjfwKz02Z1EGa" class="floating" style="bottom: 80%; right: 20%;"/>
+  <img src="https://drive.google.com/thumbnail?id=1mIwtZcJO39LYWtO-A5scjfwKz02Z1EGa" class="floating" style="top: 90%; left: 10%;"/>
+  <img src="https://drive.google.com/thumbnail?id=1mIwtZcJO39LYWtO-A5scjfwKz02Z1EGa" class="floating" style="bottom: 90%; right: 10%;"/>
+  <img src="https://drive.google.com/thumbnail?id=1mIwtZcJO39LYWtO-A5scjfwKz02Z1EGa" class="floating" style="top: 100%; left: 0%;"/>
+  <img src="https://drive.google.com/thumbnail?id=1mIwtZcJO39LYWtO-A5scjfwKz02Z1EGa" class="floating"style="bottom: 100%; right: 0%;"/>
+   </div>
+      <header>
+          <div class="hamburger" id="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+        <nav id="menu" class="menu">
+            <a href="#h1">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <a href="#footer">About</a>
+        </nav>
+        <h1 id="h1">FINESSE DIGITAL INNOVATIONS</h1>
+      </header>
+ <main>
+    <section id="about" style="background:
+linear-gradient(to bottom, #000428,
+#004e92); /* Cosmic gradient */ color:
+#ffffff; padding: 60px 20px; font-family: 'Arial',
+sans-serif;">
+  <div class="container" style="max-width:
+1000px; margin: 0 auto; display: flex; flex-wrap:
+wrap; align-items: center; gap: 40px;">
+    <!-- Hero Image Placeholder (Replace with
+your flier image) -->
+    <div class="image-side" style="flex: 1;
+min-width: 300px;">
+      <img src="https://drive.google.com/thumbnail?id=1F7qWip_hTC1KL6eUVmUVIInEXXEpeKct" alt="Finesse
+Digital Innovations VR Explorer" style="width:
+100%; border-radius: 10px; box-shadow: 0 4px
+20px rgba(0,255,136,0.3); /* Glowing shadow
+*/">
+    </div>
+    <!-- Text Content -->
+    <div class="text-side" style="flex: 2;
+text-align: left;">
+      <h2 style="font-size: 2.5em; margin-bottom:
+20px; color: #00ff88; /* Neon green */">About
+Finesse Digital Innovations</h2>
+      <p style="font-size: 1.1em; line-height: 1.6;
+opacity: 0.9; margin-bottom: 20px;">
+        In the vibrant heart of Zaria, Kaduna State,
+Nigeria, Finesse Digital Innovations emerged
+from the bold vision of Felix, a passionate
+entrepreneur dedicated to democratizing
+digital tools for a new generation. Inspired by a
+cosmic PowerPoint flier featuring a VR
+ <script>
+   const hamburger =
+ document.getElementById('hamburger');
+ const menu = document.getElementById('menu');
+ hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  menu.classList.toggle('active');
+ })
+ </script>
+ </body>
+ </html
